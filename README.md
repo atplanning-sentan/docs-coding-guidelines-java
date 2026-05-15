@@ -1,4 +1,4 @@
-# coding-guidelines
+# docs-coding-guidelines
 
 社内で共通利用する **Javaコーディング規約** と、レビュー運用（チェックリスト／PRテンプレート／AIレビュー手順）をまとめたリポジトリです。
 
