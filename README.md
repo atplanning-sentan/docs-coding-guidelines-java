@@ -4,7 +4,7 @@
 ## 📦 含まれるもの
 
 ### 📋 規約・レビュー
-- 規約（完全版・Markdown化）: [java/CODING_RULES.md](java/CODING_RULES.md)
+- 規約（Markdown版）: [java/CODING_RULES.md](java/CODING_RULES.md)
 - レビュー判定: [java/REVIEW_CHECKLIST.md](java/REVIEW_CHECKLIST.md)
 - OK/NG例: [java/PATTERNS.md](java/PATTERNS.md), [java/NG_PATTERNS.md](java/NG_PATTERNS.md)
 
