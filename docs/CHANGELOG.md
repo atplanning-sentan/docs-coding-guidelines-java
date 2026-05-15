@@ -18,4 +18,4 @@
 - PRテンプレート（`.github/pull_request_template.md`）
 - 再利用可能な品質チェック CI（`.github/workflows/reusable-java-quality.yml`）
 - Maven品質プラグイン設定テンプレート（`templates/maven/quality-plugins.xml`）
-- 貢献ガイド（`docs/CONTRIBUTING.md`）
+- 規約の変更手順（`docs/CONTRIBUTING.md`）

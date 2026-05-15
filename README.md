@@ -16,7 +16,7 @@
 - 原典（Word）: [docs/original/Javaコーディング規約.docx](docs/original/Javaコーディング規約.docx)
 - 規約から参照する画像: [docs/images/](docs/images/)
 - 変更履歴（詳細）: [docs/CHANGELOG.md](docs/CHANGELOG.md)（要約は本ファイル末尾の [改定履歴](#改定履歴)）
-- 貢献ガイド: [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md)
+- 規約の変更手順: [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md)
 
 ### 🐙 GitHub運用
 - PRテンプレート: [.github/pull_request_template.md](.github/pull_request_template.md)
@@ -41,7 +41,7 @@
 │   ├── images/           # 規約から参照する図
 │   ├── original/         # 原典 docx
 │   ├── CHANGELOG.md
-│   └── CONTRIBUTING.md
+│   └── CONTRIBUTING.md   # 規約の変更手順
 ├── .github/
 │   ├── pull_request_template.md
 │   └── workflows/
