@@ -21,9 +21,3 @@ try (var in = openStream()) {
     return read(in);
 }
 ```
-
-## BigDecimal（誤差が許されない計算）
-```java
-var rate = new java.math.BigDecimal("0.07");
-return java.math.BigDecimal.ONE.subtract(rate);
-```

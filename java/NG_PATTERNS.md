@@ -14,13 +14,3 @@ try {
     return false;
 }
 ```
-
-## フィールドを一時変数に使用
-```java
-private java.util.List<String> temp;
-
-public String build(...) {
-    this.temp = new java.util.ArrayList<>();
-    ...
-}
-```
