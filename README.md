@@ -1,15 +1,59 @@
 # docs-coding-guidelines-java
 
-添付の **Javaコーディング規約.docx** をベースに、GitHubで運用しやすい形に整備したリポジトリです。
+原典 **[Javaコーディング規約.docx](docs/original/Javaコーディング規約.docx)**（`docs/original/`）をベースに、GitHubで運用しやすい形に整備したリポジトリです。
 
 ## 含まれるもの
+
+### 規約・レビュー
 - 規約（完全版・Markdown化）: `java/CODING_RULES.md`
-- レビュー運用: `java/REVIEW_CHECKLIST.md`
-- AIレビュー: `java/AI_PROMPT.md`, `java/AI_RULES.md`
+- レビュー判定: `java/REVIEW_CHECKLIST.md`
 - OK/NG例: `java/PATTERNS.md`, `java/NG_PATTERNS.md`
-- 画像: `docs/images/`
+
+### AIレビュー
+- プロンプト: `java/AI_PROMPT.md`
+- 利用ルール: `java/AI_RULES.md`
+
+### ドキュメント・原典
+- 原典（Word）: `docs/original/Javaコーディング規約.docx`
+- 規約から参照する画像: `docs/images/`
+- 変更履歴（詳細）: `docs/CHANGELOG.md`（要約は本ファイル末尾の [改定履歴](#改定履歴)）
+- 貢献ガイド: `docs/CONTRIBUTING.md`
+
+### GitHub運用
+- PRテンプレート: `.github/pull_request_template.md`
+- 再利用可能な品質チェック CI: `.github/workflows/reusable-java-quality.yml`
+
+### ビルド連携
+- Maven品質プラグイン設定テンプレート: `templates/maven/quality-plugins.xml`
 
 ## 使い方
-1. 規約参照: `java/CODING_RULES.md`
-2. PR作成時: `.github/pull_request_template.md` に従う
-3. AIレビュー: `java/AI_PROMPT.md` を貼り付けて実施
+
+1. **規約を読む**: `java/CODING_RULES.md`（具体例は `java/PATTERNS.md` / `java/NG_PATTERNS.md`）
+2. **PRを出す**: `.github/pull_request_template.md` に従い、`java/CODING_RULES.md` と `java/REVIEW_CHECKLIST.md` で確認する
+3. **AIレビューする**: `java/AI_PROMPT.md` をレビューツールに貼り付ける（`java/AI_RULES.md` と上記規約・チェックリストが前提）
+4. **（任意）CI・Maven**: 他リポジトリから `.github/workflows/reusable-java-quality.yml` を `workflow_call` で呼び出す。設定例は `templates/maven/quality-plugins.xml`
+
+## ディレクトリ構成
+
+```
+.
+├── java/                 # 規約・チェックリスト・AI用ドキュメント
+├── docs/
+│   ├── images/           # 規約から参照する図
+│   ├── original/         # 原典 docx
+│   ├── CHANGELOG.md
+│   └── CONTRIBUTING.md
+├── .github/
+│   ├── pull_request_template.md
+│   └── workflows/
+└── templates/maven/      # 品質プラグイン設定のテンプレート
+```
+
+---
+
+## 改定履歴
+
+| 日付 | 内容 |
+|---|---|
+| 2026-05-15 | 新規制定（原典 docx の Markdown 化、レビュー・AI・CI テンプレート一式） |
+| 2026-05-15 | README を実フォルダ構成に合わせて更新、`CODING_RULES.md` にシャローコピー図をリンク |
