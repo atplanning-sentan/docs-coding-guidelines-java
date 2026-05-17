@@ -1,4 +1,4 @@
-# ☕ docs-coding-guidelines-java
+# ☕ ATP Java コーディング規約
 
 [![ATP | Java コーディング規約](https://img.shields.io/badge/ATP-Java_コーディング規約-8e1b46?style=flat-square)](https://www.atp.co.jp/)
 [![AI レビュー対応](https://img.shields.io/badge/AIレビュー-対応-8e1b46?style=flat-square)](https://github.com/atplanning-sentan/docs-coding-guidelines-java/blob/main/java/AI_PROMPT.md)
@@ -149,4 +149,4 @@ PR・git 差分・src/test は対象外。【出力】§1〜§5 と REVIEW_CHECK
 | 日付 | 内容 |
 |---|---|
 | 2026-05-15 | 新規制定（原典 docx の Markdown 化、レビュー・AI・CI テンプレート一式）。README・`CODING_RULES.md` を実構成に合わせて整備 |
-| 2026-05-18 | 企業公開向け README 整備（正式社名・先端技術本部 CAG 表記・公開範囲/免責の Alert、AI レビュー起動手順、使い方の見出し構成と ① 手順）。`AI_PROMPT.md` に起動テンプレート付録を追加 |
+| 2026-05-18 | 企業公開向け README 整備（日本語タイトル・正式社名・先端技術本部 CAG 表記・公開範囲/免責の Alert、AI レビュー起動手順、使い方の見出し構成と ① 手順）。`CODING_RULES.md` の説明文を文単位改行に整理。`AI_PROMPT.md` に起動テンプレート付録を追加 |

@@ -5,7 +5,7 @@
 ## 2026-05-18
 
 ### Changed
-- `README.md` / `java/CODING_RULES.md`: 企業公開向け整理（正式社名・先端技術本部 CAG 表記、作成者・公開範囲/免責の Alert、バッジ、見出し・絵文字）
+- `README.md` / `java/CODING_RULES.md`: 企業公開向け整理（日本語タイトル・CAG 表記、説明文の文単位改行、公開範囲/免責の Alert、バッジ、見出し・絵文字）。`CONTRIBUTING.md` に CODING_RULES 記載方針を追記
 - `README.md`: AI レビュー起動手順（方式A raw URL・送信例 / 方式B clone + @・送信例）
 - `README.md`: 「使い方」を H3（1〜4）/ H4（方式A/B）、手順を ①〜表記
 - `java/AI_PROMPT.md`: 利用者向け起動テンプレート（URL / clone）を付録として追加
