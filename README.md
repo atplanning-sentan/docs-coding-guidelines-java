@@ -1,4 +1,12 @@
 # ☕ docs-coding-guidelines-java
+
+[![ATP](https://img.shields.io/badge/ATP-先端技術本部-8e1b46?style=flat-square)](https://www.atp.co.jp/)
+![ATP Guide](https://img.shields.io/badge/ATP公式-Javaコーディング規約-8e1b46?style=flat-square)
+![Guide](https://img.shields.io/badge/Guide-コーディング規約-8e1b46?style=flat-square)
+![Standards](https://img.shields.io/badge/Standards-JavaCoding-8e1b46?style=flat-square)
+![AI Review](https://img.shields.io/badge/AIレビュー対応-Yes-8e1b46?style=flat-square)
+
+
 本リポジトリは、ATP先端技術本部が制定した Java コーディング規約（原典: [Javaコーディング規約.docx](docs/original/Javaコーディング規約.docx)）を単一の参照源として管理し、Pull Request レビューおよび AI によるコードレビューで利用できるよう整備したものです。
 
 ## 📦 含まれるもの
