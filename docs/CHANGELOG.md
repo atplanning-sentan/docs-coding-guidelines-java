@@ -5,15 +5,15 @@
 ## 2026-05-18
 
 ### Changed
-- `README.md`: AI レビュー起動手順を追記（方式A URL / 方式B clone + @）
-- `README.md`: 方式A に raw URL 一覧・チャット送信例、方式B に @ 一覧・送信例を追記して整理
+- `README.md` / `java/CODING_RULES.md`: 企業公開向け整理（正式社名・先端技術本部 CAG 表記、作成者・公開範囲/免責の Alert、バッジ、見出し・絵文字）
+- `README.md`: AI レビュー起動手順（方式A raw URL・送信例 / 方式B clone + @・送信例）
+- `README.md`: 「使い方」を H3（1〜4）/ H4（方式A/B）、手順を ①〜表記
 - `java/AI_PROMPT.md`: 利用者向け起動テンプレート（URL / clone）を付録として追加
 
 ## 2026-05-15
 
 ### Changed
-- `README.md`: 含まれるもの・使い方・ディレクトリ構成をリポジトリ実態に合わせて整備
-- `README.md`: 改定履歴セクションを追加
+- `README.md`: 含まれるもの・使い方・ディレクトリ構成・改定履歴をリポジトリ実態に合わせて整備
 - `java/CODING_RULES.md`: シャローコピー説明に `docs/images/image_01.png` をリンク
 
 ### Added（初回公開）
