@@ -49,7 +49,9 @@
 
 ### ビルド連携
 
-- Maven品質プラグイン設定テンプレート: [templates/maven/quality-plugins.xml](templates/maven/quality-plugins.xml)
+- 品質設定一式（Checkstyle / SpotBugs テンプレ / markdownlint）: [templates/quality/](templates/quality/)
+- Maven 品質プラグイン設定（完全版）: [templates/quality/maven/quality-plugins.xml](templates/quality/maven/quality-plugins.xml)
+- Maven 品質プラグイン（簡易・レガシー）: [templates/maven/quality-plugins.xml](templates/maven/quality-plugins.xml)
 
 ## 📖 使い方
 
@@ -124,7 +126,7 @@ PR・git 差分・src/test は対象外。【出力】§1〜§5 と REVIEW_CHECK
 
 ### 4. （任意）CI・Maven
 
-他リポジトリから [.github/workflows/reusable-java-quality.yml](.github/workflows/reusable-java-quality.yml) を `workflow_call` で呼び出す。設定例は [templates/maven/quality-plugins.xml](templates/maven/quality-plugins.xml)
+他リポジトリから [.github/workflows/reusable-java-quality.yml](.github/workflows/reusable-java-quality.yml) を `workflow_call` で呼び出す。`templates/quality/` をコピーし、[templates/quality/maven/quality-plugins.xml](templates/quality/maven/quality-plugins.xml) を `pom.xml` に取り込む。
 
 ## 📁 ディレクトリ構成
 
@@ -139,7 +141,9 @@ PR・git 差分・src/test は対象外。【出力】§1〜§5 と REVIEW_CHECK
 ├── .github/
 │   ├── pull_request_template.md
 │   └── workflows/
-└── templates/maven/      # 品質プラグイン設定のテンプレート
+└── templates/
+    ├── quality/          # Checkstyle / SpotBugs / markdownlint（推奨）
+    └── maven/            # 品質プラグイン簡易テンプレ（レガシー）
 ```
 
 ---
@@ -150,3 +154,4 @@ PR・git 差分・src/test は対象外。【出力】§1〜§5 と REVIEW_CHECK
 |---|---|
 | 2026-05-15 | 新規制定（原典 docx の Markdown 化、レビュー・AI・CI テンプレート一式）。README・`CODING_RULES.md` を実構成に合わせて整備 |
 | 2026-05-18 | 企業公開向け README 整備（日本語タイトル・正式社名・先端技術本部 CAG 表記・公開範囲/免責の Alert、AI レビュー起動手順、使い方の見出し構成と ① 手順）。`CODING_RULES.md` の説明文を文単位改行に整理。`AI_PROMPT.md` に起動テンプレート付録を追加 |
+| 2026-05-18 | `templates/quality/` 追加（Checkstyle / SpotBugs / markdownlint / Maven 連携） |

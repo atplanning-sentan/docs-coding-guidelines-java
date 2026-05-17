@@ -1,3 +1,7 @@
+<!--
+  レガシー簡易スニペット（configLocation 未指定）。
+  新規プロジェクトは templates/quality/maven/quality-plugins.xml を使用すること。
+-->
 <!-- Maven quality plugins snippet -->
 <build>
   <plugins>

@@ -4,6 +4,9 @@
 
 ## 2026-05-18
 
+### Added
+- `templates/quality/`: Checkstyle・SpotBugs 除外テンプレ・markdownlint・Maven 完全スニペット（社内 Java アプリ向け）
+
 ### Changed
 - `README.md` / `java/CODING_RULES.md`: 企業公開向け整理（日本語タイトル・CAG 表記、説明文の文単位改行、公開範囲/免責の Alert、バッジ、見出し・絵文字）。`CONTRIBUTING.md` に CODING_RULES 記載方針を追記
 - `README.md`: AI レビュー起動手順（方式A raw URL・送信例 / 方式B clone + @・送信例）
