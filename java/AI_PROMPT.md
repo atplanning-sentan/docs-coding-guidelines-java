@@ -62,3 +62,58 @@ PR のマージ判定や「今回の変更」の是非は対象外。
 プロジェクト前提により対象外にした規約、判定に必要だったが文書に無い前提があれば列挙。
 
 指摘ゼロでも §3 の表は省略しない。
+
+---
+
+## 利用者の起動手順（付録）
+
+本節は **利用者が AI ツールへ送る起動文** のテンプレートである。上記【絶対条件】〜【出力】がレビュー時の正本。
+
+**共通**
+
+- レビュー対象: 現在開いているワークスペースの `src/main/java` 配下の `.java`（別構成はビルド定義・README から main ソースを特定）
+- 対象外: git の PR / 差分 / 変更履歴、`src/test`（含める場合はユーザーが別途指示）
+- 規約の raw URL ベース（`main` ブランチ）:
+  `https://raw.githubusercontent.com/atplanning-sentan/docs-coding-guidelines-java/main/java/`
+
+### 方式A: URL 起動（clone 不要）
+
+チャットに以下をそのまま送る（`{SHA}` を使う場合は `main` をコミット SHA に置換）。
+
+```text
+【方式: URL】次の手順で Java ベースライン監査を実行してください。
+
+1) 次の raw URL の全文を読み、以降の手順として厳守:
+https://raw.githubusercontent.com/atplanning-sentan/docs-coding-guidelines-java/main/java/AI_PROMPT.md
+
+2) 同リポジトリの以下も読む（raw）:
+https://raw.githubusercontent.com/atplanning-sentan/docs-coding-guidelines-java/main/java/AI_RULES.md
+https://raw.githubusercontent.com/atplanning-sentan/docs-coding-guidelines-java/main/java/CODING_RULES.md
+https://raw.githubusercontent.com/atplanning-sentan/docs-coding-guidelines-java/main/java/REVIEW_CHECKLIST.md
+（任意）
+https://raw.githubusercontent.com/atplanning-sentan/docs-coding-guidelines-java/main/java/NG_PATTERNS.md
+https://raw.githubusercontent.com/atplanning-sentan/docs-coding-guidelines-java/main/java/PATTERNS.md
+
+3) レビュー対象: 現在開いているワークスペースの src/main/java の .java のみ。
+   PR・git 差分・src/test は対象外。
+
+4) AI_PROMPT.md 本文の【出力】§1〜§5 に従う。REVIEW_CHECKLIST 全項目の表は省略しない。
+```
+
+### 方式B: clone + @ 参照（推奨）
+
+1. 本リポジトリを clone し、レビュー対象 Java プロジェクトを AIエディタで開く（必要ならワークスペースに本リポジトリを追加）
+2. チャットで次を @ 添付する（パスは clone 先に合わせる）:
+
+- `java/AI_PROMPT.md`
+- `java/AI_RULES.md`
+- `java/CODING_RULES.md`
+- `java/REVIEW_CHECKLIST.md`
+- （任意）`java/NG_PATTERNS.md` / `java/PATTERNS.md`
+
+3. 続けて以下を送る:
+
+```text
+【方式: clone/@】AI_PROMPT.md に従い、本ワークスペースの src/main/java を一括レビューしてください。
+PR・git 差分・src/test は対象外。【出力】§1〜§5 と REVIEW_CHECKLIST 全項目の表を出してください。
+```

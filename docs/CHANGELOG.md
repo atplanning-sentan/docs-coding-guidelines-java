@@ -2,6 +2,13 @@
 
 このファイルは変更の詳細を記録します。利用者向けの要約は [README.md](../README.md#改定履歴) の改定履歴を参照してください。
 
+## 2026-05-18
+
+### Changed
+- `README.md`: AI レビュー起動手順を追記（方式A URL / 方式B clone + @）
+- `README.md`: 方式A に raw URL 一覧・チャット送信例、方式B に @ 一覧・送信例を追記して整理
+- `java/AI_PROMPT.md`: 利用者向け起動テンプレート（URL / clone）を付録として追加
+
 ## 2026-05-15
 
 ### Changed

@@ -37,7 +37,61 @@
 
 1. 📋 **規約を読む**: [java/CODING_RULES.md](java/CODING_RULES.md)（具体例は [java/PATTERNS.md](java/PATTERNS.md) / [java/NG_PATTERNS.md](java/NG_PATTERNS.md)）
 2. 🔀 **PRを出す**: [.github/pull_request_template.md](.github/pull_request_template.md) に従い、[java/CODING_RULES.md](java/CODING_RULES.md) と [java/REVIEW_CHECKLIST.md](java/REVIEW_CHECKLIST.md) で確認する
-3. 🤖 **AIレビューする**: [java/AI_PROMPT.md](java/AI_PROMPT.md) をレビューツールに貼り付ける（[java/AI_RULES.md](java/AI_RULES.md) と上記規約・チェックリストが前提）
+3. 🤖 **AIレビューする**（手順の正本: [java/AI_PROMPT.md](java/AI_PROMPT.md)）
+
+   **レビュー対象**は本リポジトリではなく、**AIエディタ**で開いている **Java アプリケーション** の `src/main/java`（PR の差分は見ない。ルール試験・ベースライン監査用）。
+
+   **前提**として [java/AI_RULES.md](java/AI_RULES.md)・[java/CODING_RULES.md](java/CODING_RULES.md)・[java/REVIEW_CHECKLIST.md](java/REVIEW_CHECKLIST.md) を読ませること（任意: [java/PATTERNS.md](java/PATTERNS.md) / [java/NG_PATTERNS.md](java/NG_PATTERNS.md)）。
+
+   #### 方式A: URL（clone 不要）
+
+   1. レビュー対象の Java プロジェクトを AIエディタで開く
+   2. AIチャットに、次の **raw URL**（`blob` ではなく `raw.githubusercontent.com`）を読ませる
+
+      | 文書 | raw URL |
+      |------|---------|
+      | AI_PROMPT | https://raw.githubusercontent.com/atplanning-sentan/docs-coding-guidelines-java/main/java/AI_PROMPT.md |
+      | AI_RULES | https://raw.githubusercontent.com/atplanning-sentan/docs-coding-guidelines-java/main/java/AI_RULES.md |
+      | CODING_RULES | https://raw.githubusercontent.com/atplanning-sentan/docs-coding-guidelines-java/main/java/CODING_RULES.md |
+      | REVIEW_CHECKLIST | https://raw.githubusercontent.com/atplanning-sentan/docs-coding-guidelines-java/main/java/REVIEW_CHECKLIST.md |
+
+      **送信例（そのまま貼ってよい）:**
+
+      ```text
+      次の raw URL を読み、AI_PROMPT.md の手順に従い、
+      現在のワークスペースの src/main/java を一括レビューしてください。
+      PR・git 差分・src/test は対象外です。
+
+      https://raw.githubusercontent.com/atplanning-sentan/docs-coding-guidelines-java/main/java/AI_PROMPT.md
+      https://raw.githubusercontent.com/atplanning-sentan/docs-coding-guidelines-java/main/java/AI_RULES.md
+      https://raw.githubusercontent.com/atplanning-sentan/docs-coding-guidelines-java/main/java/CODING_RULES.md
+      https://raw.githubusercontent.com/atplanning-sentan/docs-coding-guidelines-java/main/java/REVIEW_CHECKLIST.md
+      ```
+
+   3. バージョンを固定する場合は、上記 URL の `main` をコミット SHA に差し替える
+   4. 任意ファイル（PATTERNS / NG_PATTERNS）や詳細手順: [AI_PROMPT.md](java/AI_PROMPT.md) 付録「方式A」
+
+   #### 方式B: clone + @ 参照（推奨・安定）
+
+   1. 本リポジトリを clone する
+   2. レビュー対象プロジェクトを AIエディタで開き、必要ならワークスペースに本リポジトリを追加する
+   3. AIチャットで次を @ 添付する（パスは clone 先に合わせる）
+
+      - `java/AI_PROMPT.md`
+      - `java/AI_RULES.md`
+      - `java/CODING_RULES.md`
+      - `java/REVIEW_CHECKLIST.md`
+      - （任意）`java/PATTERNS.md` / `java/NG_PATTERNS.md`
+
+   4. 続けて次を送る
+
+      ```text
+      AI_PROMPT.md に従い、本ワークスペースの src/main/java を一括レビューしてください。
+      PR・git 差分・src/test は対象外。【出力】§1〜§5 と REVIEW_CHECKLIST 全項目の表を出してください。
+      ```
+
+   5. チームで規約版を揃える場合は tag または commit を checkout する
+
 4. ⚙️ **（任意）CI・Maven**: 他リポジトリから [.github/workflows/reusable-java-quality.yml](.github/workflows/reusable-java-quality.yml) を `workflow_call` で呼び出す。設定例は [templates/maven/quality-plugins.xml](templates/maven/quality-plugins.xml)
 
 ## 📁 ディレクトリ構成
@@ -64,3 +118,5 @@
 |---|---|
 | 2026-05-15 | 新規制定（原典 docx の Markdown 化、レビュー・AI・CI テンプレート一式） |
 | 2026-05-15 | README を実フォルダ構成に合わせて更新、`CODING_RULES.md` にシャローコピー図をリンク |
+| 2026-05-18 | README に AI レビュー起動手順（URL / clone）を追記、`AI_PROMPT.md` に起動テンプレート付録を追加 |
+| 2026-05-18 | README 方式A に raw URL 一覧・チャット送信例を追記、方式B を @ 一覧・送信例で整理 |
